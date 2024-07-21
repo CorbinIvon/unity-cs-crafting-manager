@@ -1,6 +1,13 @@
 Note: This is a work in progress. I will be updating this as I find time to do so. You are free to use these scripts. All I ask is to be attributed in your project.
 # How to use
 ## Setup
+### Quick Reference
+1. Create a prefab and place it in the `Resources/` folder.
+2. Create an items.xml file and place it in the `StreamingAssets/Data/` folder.
+2.1. Add the prefab item configuration to the items.xml file (Reference below).
+3. Create a GameObject in your scene and attach the `CraftingStation.cs` script to it. Assign the `Station Type` to the type of crafting station that it is.
+4. That's it! You're all set up and ready to go!
+
 ### Project File Hierarchy
 Please ensure that you have the following folders in your base project Assets folder:
 1. Resources
@@ -15,6 +22,7 @@ All of your xml configurations will go under the StreamingAssets/Data folder. It
 
 You are free to move the CraftingManager folder to wherever you see fit.
 
+Here's a visual representation of the file hierarchy:
 ```
 Assets
 |-- Resources
@@ -42,6 +50,16 @@ Assets
 |       |-- Mod2
 |           |-- items.xml
 ```
+### Create a prefab
+Create a prefab and place it in the `Resources/` folder. This prefab will be the item that is crafted. The prefab name must match the `name` attribute in the items.xml file.
+
+### Create an items.xml file
+Create an items.xml (Reference below) file and place it in the `StreamingAssets/Data/` folder. This file will contain all of the items that can be crafted in your game.
+
+### Setting up a CraftingStation
+Create a GameObject in your scene and attach the `CraftingStation.cs` script to it. Set the `Station Type` to the type of crafting station that it is. This will allow the item to find where they can be crafted at.
+
+That's it! You're all set up and ready to go! All you need to do now is implement a way to interact with the crafting station, and you're good to go!
 
 ## How to use
 Simply attach the `CraftingStation.cs` script to a GameObject in your scene. You can do this by selecting your crafting station, and choosing the `Add Component` option at the bottom and searching for `CraftingStation`.
